@@ -4,7 +4,6 @@ import random
 from big_food import BigFood
 from levels import Level
 
-# Kích thước màn hình và ô lưới
 SCREEN_WIDTH = 480
 SCREEN_HEIGHT = 480
 GRIDSIZE = 20
@@ -105,7 +104,7 @@ def main():
     show_start_screen(screen)  
 
     level = Level(1)
-    level.speed = 5  # Giảm tốc độ ban đầu
+    level.speed = 5  
     snake = Snake()
     food = Food()
     big_food = BigFood(SCREEN_WIDTH, SCREEN_HEIGHT, GRIDSIZE)
@@ -128,7 +127,7 @@ def main():
                     big_food.position = None
                     food_count = 0
                     game_over = False
-                    level.speed = 5  # Reset tốc độ khi chơi lại
+                    level.speed = 5 
                 elif not paused:
                     if event.key == pygame.K_UP:
                         snake.turn((0, -1))
